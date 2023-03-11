@@ -9,7 +9,7 @@ context('Sign-up', () => {
     it('Should sign-up sucessfully', () => {
         let name = faker.name.firstName()
         let lastName = faker.name.lastName()
-        let email = faker.internet.email(name)
+        let email = faker.internet.email(name, lastName)
 
         cy.get('#reg_email').type(email)
         cy.get('#reg_password').type("senha@teste!")
